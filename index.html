@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - Discover Amazing Web Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="home">
+        <nav class="nav">
+            <div class="nav__brand">
+                <h1 class="nav__logo">GameHub</h1>
+            </div>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#games" class="nav__link">Games</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav__toggle" id="nav-toggle">
+                <span class="nav__hamburger"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Welcome to GameHub</h1>
+            <p class="hero__subtitle">Discover Amazing Web Games</p>
+            <button class="btn btn--primary hero__cta" onclick="scrollToGames()">Play Now</button>
+        </div>
+        <div class="hero__particles" id="particles"></div>
+    </section>
+
+    <!-- Featured Game Section -->
+    <section class="featured-game" id="featured-game">
+        <div class="container">
+            <h2 class="section__title">Featured Game</h2>
+            <div class="game-container">
+                <div class="game-info">
+                    <h3 class="game__title">Ball Catcher Pro</h3>
+                    <p class="game__description">
+                        Catch falling balls with your paddle to score points! Use arrow keys or mouse to control the paddle.
+                    </p>
+                    <div class="game__controls">
+                        <h4>Controls:</h4>
+                        <ul>
+                            <li>Arrow Keys: Move paddle left/right</li>
+                            <li>Mouse: Move paddle to cursor position</li>
+                            <li>Space: Pause/Resume game</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="game-canvas-container">
+                    <canvas id="gameCanvas" width="400" height="300"></canvas>
+                    <div class="game-ui">
+                        <div class="score">Score: <span id="score">0</span></div>
+                        <div class="lives">Lives: <span id="lives">3</span></div>
+                        <button class="btn btn--secondary" id="startGame">Start Game</button>
+                        <button class="btn btn--outline" id="resetGame">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Gallery -->
+    <section class="games-gallery" id="games">
+        <div class="container">
+            <h2 class="section__title">Games Collection</h2>
+            <div class="games-grid" id="games-grid">
+                <!-- Game cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section__title">About GameHub</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>GameHub is your premier destination for web-based gaming experiences. We showcase the best HTML5 games built with modern web technologies.</p>
+                    <p>Our platform demonstrates the power of JavaScript gaming frameworks and provides developers with examples of what's possible in browser-based gaming.</p>
+                </div>
+                <div class="about__chart">
+                    <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/8e3da16dd84cf9b547dfadc9079f9f48/b940a6c8-58bb-4916-94cb-8351f3e0d424/f30e5a1a.png" alt="Popular JavaScript Gaming Frameworks" class="chart-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section__title">Get In Touch</h2>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <h3>Contact Information</h3>
+                    <p>Email: info@gamehub.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Gaming Street, Tech City, TC 12345</p>
+                </div>
+                <div class="contact__social">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank">
+                            <span class="social-icon">🐦</span>
+                            Twitter
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <span class="social-icon">💬</span>
+                            Discord
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <span class="social-icon">📺</span>
+                            YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3>GameHub</h3>
+                    <p>Your gaming destination</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#games">Games</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 GameHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
